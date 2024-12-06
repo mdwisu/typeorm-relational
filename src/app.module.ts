@@ -6,6 +6,10 @@ import { UsersModule } from './users/users.module';
 import { PostsModule } from './posts/posts.module';
 import { User } from './users/user.entity';
 import { Post } from './posts/post.entity';
+import { StudentsModule } from './students/students.module';
+import { CoursesModule } from './courses/courses.module';
+import { Student } from './students/student.entity';
+import { Course } from './courses/course.entity';
 
 @Module({
   imports: [
@@ -16,11 +20,13 @@ import { Post } from './posts/post.entity';
       username: 'postgres', // Username DB
       password: 'postgredwi', // Password DB
       database: 'typeorm_relational', // Nama database
-      entities: [User, Post], // Daftar entitas yang digunakan
+      entities: [User, Post, Student, Course], // Daftar entitas yang digunakan
       synchronize: true, // Hanya di development
     }),
     UsersModule,
     PostsModule,
+    StudentsModule,
+    CoursesModule,
   ],
   controllers: [AppController],
   providers: [AppService],
