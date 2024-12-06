@@ -14,7 +14,7 @@ import { Post } from './posts/post.entity';
       host: 'localhost', // Atau host PostgreSQL lainnya
       port: 5432, // Default PostgreSQL port
       username: 'postgres', // Username DB
-      password: 'password', // Password DB
+      password: 'postgredwi', // Password DB
       database: 'typeorm_relational', // Nama database
       entities: [User, Post], // Daftar entitas yang digunakan
       synchronize: true, // Hanya di development
